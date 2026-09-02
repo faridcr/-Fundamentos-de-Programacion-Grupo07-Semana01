@@ -1,0 +1,17 @@
+import math 
+
+n = int(input("Ingrese un número: "))
+es_primo = True
+
+if n < 2:
+    es_primo = False
+else:
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            es_primo = False
+            break
+
+if es_primo:
+    print(n, "es un número primo.")
+else:
+    print(n, "no es un número primo.")
